@@ -159,20 +159,32 @@
 			<string>###[ \t]*\n</string>
 			<key>name</key>
 			<string>comment.block.coffee</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>(SYMBOL:)([A-Z]+\s)?(?=[a-zA-Z\$_])([^\s]*)</string>
+					<key>name</key>
+					<string>meta.function.explicit.coffee</string>
+				</dict>
+			</array>
 		</dict>
 		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.comment.coffee</string>
-				</dict>
-			</dict>
-			<key>match</key>
-			<string>(#).*$\n?</string>
+			<key>begin</key>
+			<string>(#).*</string>
+			<key>end</key>
+			<string>$\n?</string>
 			<key>name</key>
 			<string>comment.line.coffee</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>(SYMBOL:)([A-Z]+\s)?(?=[a-zA-Z\$_])([a-zA-Z\$_\-]*)</string>
+					<key>name</key>
+					<string>meta.function.explicit.coffee</string>
+				</dict>
+			</array>
 		</dict>
 		<dict>
 			<key>begin</key>
